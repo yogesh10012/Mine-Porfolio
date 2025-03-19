@@ -6,9 +6,9 @@ on:
     - main
 
 jobs:
-  deploy:
-  runs-on: ubuntu-latest
-  steps:
+  build-and-deploy:
+    runs-on: ubuntu-lates
+      steps:
   - name: Checkout
     user: actions/checkout@v1
 
