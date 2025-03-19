@@ -7,15 +7,15 @@ on:
 
 jobs:
   deploy:
-  runs-on: ubuntu
+  runs-on: ubuntu-latest
   steps:
   - name: Checkout
     user: actions/checkout@v1
 
-  - neme: configure AWS credentials
+  - name: configure AWS credentials
     uses: aws-actions/configure-aws-credentials@v1
     with:
-      aws-access-key-id: ${{ secrets.AWS_SCCESS_KEY_ID }}
+      aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
       aws-secret-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
       aws-region:  ap-south-1
 
